@@ -1,4 +1,4 @@
-  
+
 const
 {
    WAConnection,
@@ -31,7 +31,7 @@ const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const exclusive = JSON.parse(fs.readFileSync('./src/exclusive.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
-const vcard = 'BEGIN:VCARD\n' 
+const VCARD = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
             + 'FN:Senpi Admin\n' 
             + 'ORG: Pengembang XBot;\n' 
