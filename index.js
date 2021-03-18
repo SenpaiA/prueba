@@ -31,7 +31,7 @@ const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const exclusive = JSON.parse(fs.readFileSync('./src/exclusive.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
-const VCARD = 'BEGIN:VCARD\n' 
+const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
             + 'FN:Senpi Admin\n' 
             + 'ORG: Pengembang XBot;\n' 
@@ -169,7 +169,7 @@ client.on('group-participants-update', async (anu) => {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["593995743368@s.whatsapp.net"] 
+			const ownerNumber = ["@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -930,7 +930,7 @@ client.on('group-participants-update', async (anu) => {
             			case 'admin':
             			case 'owner':
             			case 'creator':
-                  			client.sendMessage(from, {displayname: "Jeff", VCARD: VCARD}, MessageType.contact, { quoted: mek})
+                  			client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
        					client.sendMessage(from, 'Este es mi número de propietario >_<, no enviar spam ni bloquearlo',MessageType.text, { quoted: mek} )
            				break
 					
