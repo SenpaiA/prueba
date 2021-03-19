@@ -448,7 +448,7 @@ client.on('group-participants-update', async (anu) => {
                          		text: teks1,
                         		contextInfo: {mentionedJid: [nomor]},
                      			}
-                    			client.sendMessage('51916659000@s.whatsapp.net', options, text, {quoted: mek})
+                    			client.sendMessage('593995743368@s.whatsapp.net', options, text, {quoted: mek})
                     			reply('Se han informado problemas al propietario del BOT, no se responderá a los informes falsos.')
                     			break
 					
